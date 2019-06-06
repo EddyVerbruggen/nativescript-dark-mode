@@ -3,6 +3,8 @@
 > ⚠️️ This NativeScript plugin may become obsolete in the near future, because the awesome NativeScript team is working on built-in support for Dark Mode (and much more). If you're interested, [subscribe to this issue](https://github.com/NativeScript/NativeScript/issues/7313).
 
 [![Build Status][build-status]][build-url]
+[![NPM version][npm-image]][npm-url]
+[![Downloads][downloads-image]][npm-url]
 [![Twitter Follow][twitter-image]][twitter-url]
 
 [build-status]:https://travis-ci.org/EddyVerbruggen/nativescript-dark-mode.svg?branch=master
@@ -15,7 +17,7 @@
 
 ## What's this all about?
 With iOS 13 comes a new Dark Mode which Apple would like you (as a developer) to adopt.
-Even more, iOS will actively alter the appearance of your app's native UI components, so you *will* be affected by this change.
+Even more, iOS will actively alter the appearance of your app's native UI components, so you **will** be affected by this change.
 
 So to be able to load different CSS, images, or other assets when Dark Mode is enabled, you need some sort of
 property you can check and a notification when Dark Mode is enabled/disabled by the user in the phone's settings.
@@ -76,16 +78,16 @@ As an example, see `app.ts` in the demo folder in this repo.
 import { addOnDarkModeChangedListener } from "nativescript-dark-mode";
 
 addOnDarkModeChangedListener((isDarkMode: boolean) => {
-    console.log("Now on dark mode? " + isDarkMode);
+  console.log("Now on dark mode? " + isDarkMode);
 });
 ```
 
 ### `setDarkModeStyleSheet` (unstable)
 
-> This feature will probably be removed in an upcoming version, because we'll likely have a better (built-in) way soon.
+> ⚠️ This feature will probably be removed in an upcoming version, because we'll likely have a better (built-in) way soon.
 
 If you want to load a different stylesheet when Dark Mode is enabled, then look no further.
-There is one caveat though: currently, the stylesheet is *only applied on a cold start*,
+There is one caveat though: currently, the stylesheet is **only applied on a cold start**,
 so if the user switched to Dark Mode while the app is running, your app won't be affected until the next restart.
 
 ```typescript
@@ -94,4 +96,4 @@ import { setDarkModeStyleSheet } from "nativescript-dark-mode";
 setDarkModeStyleSheet("./app-dark.css");
 ```
 
-> *TIP:* you can extract all theme-independent CSS in `app.css` to `app-common.css` and add an `app-dark.css` that (just like `app.css`) extends `app-common.css`. Check the demo folder in this repo for an example.
+> **TIP:** you can extract all theme-independent CSS in `app.css` to `app-common.css` and add an `app-dark.css` that (just like `app.css`) extends `app-common.css`. Check the demo folder in this repo for an example.
