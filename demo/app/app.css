@@ -1,0 +1,6 @@
+﻿@import '~nativescript-theme-core/css/core.light.css';
+@import './app-common.css';
+
+Label.dynamic-label {
+    color: black;
+}
